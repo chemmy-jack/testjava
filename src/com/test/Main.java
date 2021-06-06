@@ -1,10 +1,13 @@
 package src.com.test ;
 
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in) ;
         System.out.println("Hello World") ;
         Byte age = 18 ;
         System.out.println(age) ;
@@ -26,5 +29,16 @@ public class Main {
         System.out.println(Arrays.toString(nums)) ;
         final float PI = 3.14f ;
         System.out.println(PI) ;
+        System.out.println((int)Math.round(PI)) ;
+        System.out.println(Math.PI) ;
+        System.out.println((int)(Math.random()*100)) ;
+        NumberFormat currency = NumberFormat.getCurrencyInstance() ;
+        String currency_string = currency.format(12345.1234) ;
+        System.out.println(currency_string) ;
+        System.out.println("type a number : ") ;
+        int number = scanner.nextInt() ;
+        scanner.nextLine() ;
+        System.out.println("type a string : ") ;
+        String inputStr = scanner.nextLine() ;
     }
 }
